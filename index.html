@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LifeBlog.ca</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">LifeBlog.ca</div>
+        <ul class="nav-links">
+          <li><a href="#intro">Intro</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <!-- Intro Section -->
+      <section id="intro" class="intro">
+        <div class="intro-image">
+          <img src="https://get.pxhere.com/photo/landscape-nature-wilderness-mountain-light-sky-sunrise-sunset-sunlight-morning-dawn-dusk-scenic-autumn-blue-outdoors-clouds-mountains-plateau-computer-wallpaper-678538.jpg" alt="Life Blog Image" class="image" />
+          <div class="intro-text-on-image">Welcome to LifeBlog</div>
+        </div>
+        <p class="intro-text">Where your life stories and ideas come alive!</p>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="about-section">
+        <div class="content">
+          <h2>About LifeBlog</h2>
+          <p>
+            LifeBlog.ca is a space where you can share your personal experiences, ideas, and connect with others.
+            Explore a world of creativity, personal growth, lifestyle tips, tech trends, and much more. Join us and
+            be part of this exciting community!
+          </p>
+        </div>
+      </section>
+
+      <!-- Blog Section -->
+      <section id="blog" class="blog-section">
+        <h2>Our Latest Posts</h2>
+        <p>Catch up with our latest articles, stories, and updates.</p>
+        <div class="blog-posts">
+          <div class="post">
+            <h3>Post Title 1</h3>
+            <p>Summary of the blog post goes here...</p>
+            <a href="blog.html" target="_blank">Read More</a>
+          </div>
+          <div class="post">
+            <h3>Post Title 2</h3>
+            <p>Summary of the blog post goes here...</p>
+            <a href="blog.html" target="_blank">Read More</a>
+          </div>
+          <div class="post">
+            <h3>Post Title 3</h3>
+            <p>Summary of the blog post goes here...</p>
+            <a href="blog.html" target="_blank">Read More</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section with Login Form -->
+      <section id="contact" class="contact-section">
+        <h2>Contact Us / Login</h2>
+
+        <!-- Login Form -->
+        <form id="loginForm">
+          <input type="text" id="username" placeholder="Username" />
+          <input type="password" id="password" placeholder="Password" />
+          <button type="submit">Login</button>
+        </form>
+
+        <!-- Login Message -->
+        <div id="loginMessage" style="color: green; margin-top: 20px;"></div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 LifeBlog.ca | All rights reserved</p>
+    </footer>
+
+    <script>
+      // Simulate a simple login process
+      const validUsername = 'user123';  // Example username
+      const validPassword = 'password123';  // Example password
+
+      // Handle form submission
+      document.getElementById('loginForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        const loginMessage = document.getElementById('loginMessage');
+
+        // Check if username and password are correct
+        if (username === validUsername && password === validPassword) {
+          loginMessage.textContent = 'Login Successful! Welcome back, ' + username + '!';
+          loginMessage.style.color = 'green';
+        } else {
+          loginMessage.textContent = 'Invalid credentials. Please try again.';
+          loginMessage.style.color = 'red';
+        }
+      });
+    </script>
+  </body>
+</html>
